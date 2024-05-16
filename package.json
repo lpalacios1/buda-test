@@ -1,0 +1,20 @@
+{
+  "name": "buda-test",
+  "version": "1.0.0",
+  "description": "tarea 1 para postular a buda",
+  "main": "src/index.js",
+  "repository": "https://github.com/lpalacios1/buda-test.git",
+  "author": "lpalacios1 <lpalacios1@uc.cl>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0"
+  }
+}
