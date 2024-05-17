@@ -19,5 +19,5 @@ La ruta get de 'api/spreads' entrega los spread de todos los mercados
 
 ## 3. Necesitamos guardar un spread de “alerta” el cual en el futuro consultaremos por medio de polling si el spread actual es mayor o menor de ese spread guardado. Además, debes habilitar un endpoint para que realicemos este polling.
 
-a. La ruta post de '/api/spread/alert/:market_id' se utiliza para generar una alerta
-b. la ruta get de '/api/spread/alert/:market_id' se utiliza para hacer el polling y revisar la alerta. 
+### a. La ruta post de '/api/spread/alert/:market_id' se utiliza para generar una alerta
+### b. la ruta get de '/api/spread/alert/:market_id' se utiliza para hacer el polling y revisar la alerta. 
