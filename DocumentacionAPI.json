@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "4d65d830-b16a-4016-9388-34e906a3ae35",
+		"name": "BUDA-Spreads",
+		"description": "Documentación para Tarea 1 Buda.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21211119"
+	},
+	"item": [
+		{
+			"name": "GET ALL SPREADS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/spreads",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"spreads"
+					]
+				},
+				"description": "API_URL/api/spreads\n\nRuta que entrega todos los spreads"
+			},
+			"response": []
+		},
+		{
+			"name": "GET SPREAD BY MARKET ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/spread/{{market_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"spread",
+						"{{market_id}}"
+					]
+				},
+				"description": "API_URL/api/spread/:market_id\n\nruta que entrega el sprea según market id"
+			},
+			"response": []
+		},
+		{
+			"name": "POST SPREAD ALERT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"spread\": 25000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/spread/alert/{{market_id}}",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"spread",
+						"alert",
+						"{{market_id}}"
+					]
+				},
+				"description": "API_URL/api/spread/alert/:market_id\n\nruta para guardar un spread de alerta"
+			},
+			"response": []
+		},
+		{
+			"name": "GET SPREAD ALERTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/spread/alert/{{market_id}}",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"spread",
+						"alert",
+						"{{market_id}}"
+					]
+				},
+				"description": "API_URL/api/spread/alert/:market_id\n\nRuta para consultar el spread actual mediante polling."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "market_id",
+			"value": "BTC-CLP"
+		},
+		{
+			"key": "API_URL",
+			"value": "http://localhost:8080"
+		}
+	]
+}

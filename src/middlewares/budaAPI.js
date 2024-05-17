@@ -25,6 +25,9 @@ const getMarketsIds = async () => {
 const getSpread = async (marketId) => {
     try {
         const response = await axios.get(`${BUDA_URL}markets/${marketId}/ticker`);
+        if (!response.data.ticker) {
+            return null;
+        }
         const maxBid = parseFloat(response.data.ticker.max_bid[0]);
         const minAsk = parseFloat(response.data.ticker.min_ask[0]);
         return { market: marketId, spread: minAsk - maxBid, currency: response.data.ticker.min_ask[1]};
